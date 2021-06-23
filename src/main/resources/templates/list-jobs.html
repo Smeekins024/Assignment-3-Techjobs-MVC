@@ -10,6 +10,29 @@
 
     <h1 th:text="${#strings.capitalizeWords(title)}"></h1>
 
+    <table class="job-listing">
+<!--        <tr>-->
+<!--            <th:block th:each="job : ${jobs}">-->
+<!--                <th th:text = "${job.Name}"></th>-->
+<!--            </th:block>-->
+<!--        </tr>-->
+        <tr th:each="job : ${jobs}">
+            <!-- TODO #2: Complete the View Jobs By Category Table. -->
+
+            <td> <p th:text = "'Id: ' + ${job.Id}"> </p>
+                <p th:text = "'Name: ' + ${job.Name}"> </p>
+                <p th:text = "'Employer: ' + ${job.Employer}"> </p>
+                <p th:text = "'Location: ' + ${job.Location}"> </p>
+                <p th:text = "'Position Type: ' + ${job.PositionType}"> </p>
+                <p th:text = "'Skill: ' + ${job.CoreCompetency}"> </p>
+            </td>
+
+<!--            <td th:text = "'Employer: ' + ${job.Employer}"> -->
+<!--            <td th:text = "'Location: ' + ${job.Location}"> -->
+<!--            <td th:text = "'Skills: ' + ${job.CoreCompetency}"> -->
+<!--            <td th:text = "'Position Type: ' + ${job.PositionType}"> -->
+        </tr>
+    </table>
     <!-- TODO #1 - Use a loop to display job results in a table. -->
 
 </div>
